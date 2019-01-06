@@ -1,0 +1,78 @@
+-- phpMyAdmin SQL Dump
+-- version 4.4.15.10
+-- https://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: 2019-01-06 18:19:11
+-- 服务器版本： 10.0.32-MariaDB
+-- PHP Version: 5.6.23
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `icaredbd_com`
+--
+CREATE DATABASE IF NOT EXISTS `icaredbd_com` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `icaredbd_com`;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `tbl_book`
+--
+
+DROP TABLE IF EXISTS `tbl_book`;
+CREATE TABLE IF NOT EXISTS `tbl_book` (
+  `id` int(11) NOT NULL,
+  `name` varchar(200) DEFAULT NULL COMMENT '书名',
+  `type` varchar(20) DEFAULT NULL COMMENT '类型',
+  `url` varchar(1000) DEFAULT NULL COMMENT '链接',
+  `download_link` varchar(1000) DEFAULT NULL COMMENT '图书下载链接'
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+--
+-- 转存表中的数据 `tbl_book`
+--
+
+INSERT INTO `tbl_book` (`id`, `name`, `type`, `url`, `download_link`) VALUES
+(2, '	王明年谱', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=NzgwMkNHZU5zTnRoVlRUTXpXeG5BcUhHYVBHSkR5M3V4RHV5ODIwVnliUU13WmtGQ3oveFdsU3duVEdEV0V2dGRkbEFqUUlPL1ZUdXZ3WDF6NmUwSTNIYm5FbmdCYVNvSWVJTUZRdkptVEtCUldhaU8xYW5SQWxCakZKZjV0QXIrS3FENHkzMTA0QjNVdzQ', 'http://icaredbd.com:8076/downloadme.php?download_url=NzgwMkNHZU5zTnRoVlRUTXpXeG5BcUhHYVBHSkR5M3V4RHV5ODIwVnliUU13WmtGQ3oveFdsU3duVEdEV0V2dGRkbEFqUUlPL1ZUdXZ3WDF6NmUwSTNIYm5FbmdCYVNvSWVJTUZRdkptVEtCUldhaU8xYW5SQWxCakZKZjV0QXIrS3FENHkzMTA0QjNVdzQ'),
+(3, '	王明年谱', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=ODE3OUZuNzBFNUR0T0krQ1ErVUQrUkFpMGxwYjhhVDFkWFJ6U0VXMDIwOEdUZ0wrd0NYejBYazBTTEQwNHRUaHFNM21pdFdKR0ZHMFZhY1hGTkdUcTJpbGpPVklNbHd0NXlqdVZ4bEU2bnc2ZzJuVzVSaVovS2F6WVVrNUwyVUlqbW53aHJUcVRzcUpETFU', 'http://icaredbd.com:8076/downloadme.php?download_url=ODE3OUZuNzBFNUR0T0krQ1ErVUQrUkFpMGxwYjhhVDFkWFJ6U0VXMDIwOEdUZ0wrd0NYejBYazBTTEQwNHRUaHFNM21pdFdKR0ZHMFZhY1hGTkdUcTJpbGpPVklNbHd0NXlqdVZ4bEU2bnc2ZzJuVzVSaVovS2F6WVVrNUwyVUlqbW53aHJUcVRzcUpETFU'),
+(4, '	老版《明武宗外纪》', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=OGJlNnh6NERTYnI1bEdHOXVJYlNHeld6eTVBVG9tVE1nTU9oTjVvMnlIUDdUVWhMNm9mOXRhR2IvNkJKbms4UW1QOUs5bE9pcW0rdXFoWDQwQVF5aXN2NTlETExjSmFTbE9rNjNPUVN0STJhb2EzMTBzeWJxV1JVdkhidS9jR2ZwNlJIS2c2alRhTVZXRUE4QUtYT0tPSDQ4bmJzbkNwRTBWZw', 'http://icaredbd.com:8076/downloadme.php?download_url=OGJlNnh6NERTYnI1bEdHOXVJYlNHeld6eTVBVG9tVE1nTU9oTjVvMnlIUDdUVWhMNm9mOXRhR2IvNkJKbms4UW1QOUs5bE9pcW0rdXFoWDQwQVF5aXN2NTlETExjSmFTbE9rNjNPUVN0STJhb2EzMTBzeWJxV1JVdkhidS9jR2ZwNlJIS2c2alRhTVZXRUE4QUtYT0tPSDQ4bmJzbkNwRTBWZw'),
+(5, '	北大整理本_周易正义（全一册）_魏王弼注；唐孔', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=MWY3MmJqTlp2ZEJSVlRmY3gwNFF4T0tDb2dTMEJ3bVJNTGI3bUZLV0FHdVJMN0R0WmU1RllKcWhKc0I1ZUxVRjZoVlBoZGxtQkFGYi9YSVV6aG5kWW1sQjlvenVsUTk3cW1zL3VDN1dSNzRaWWdncTREcGoxWHg2SGR2T3huQmRHeEpQdnJsYXVXdTB0TXpDaGFlNHBraE4wL2RXVjBiTHhldFVLVVFRRVVKVXBsNGZSZU1DSWM2MUFEa1YxV0p2a2xVeXV3TmdKdGdQWlNBeUZoNU9ycTQ', 'http://icaredbd.com:8076/downloadme.php?download_url=MWY3MmJqTlp2ZEJSVlRmY3gwNFF4T0tDb2dTMEJ3bVJNTGI3bUZLV0FHdVJMN0R0WmU1RllKcWhKc0I1ZUxVRjZoVlBoZGxtQkFGYi9YSVV6aG5kWW1sQjlvenVsUTk3cW1zL3VDN1dSNzRaWWdncTREcGoxWHg2SGR2T3huQmRHeEpQdnJsYXVXdTB0TXpDaGFlNHBraE4wL2RXVjBiTHhldFVLVVFRRVVKVXBsNGZSZU1DSWM2MUFEa1YxV0p2a2xVeXV3TmdKdGdQWlNBeUZoNU9ycTQ'),
+(6, '	天下郡国利病书28', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=NjdiMXJsR3RpdjhXdDdndFVZVk9ETk5FcjkxVnViNldDL0VuZjVpSlljMFJmR2FSR01wazhtNTk2a04rN09nVG54ellwdXVWeW9LbXYxbVRoZDhtUngrd2tFR010Z1ZtR3NoWGRIYnJaaU9jaTVZcUhNWWNPUWZkcEFqeTlmTFpqUDJQamxFUmkzZHRLWklWQ1pRWlRlS0p1RGRpMFE', 'http://icaredbd.com:8076/downloadme.php?download_url=NjdiMXJsR3RpdjhXdDdndFVZVk9ETk5FcjkxVnViNldDL0VuZjVpSlljMFJmR2FSR01wazhtNTk2a04rN09nVG54ellwdXVWeW9LbXYxbVRoZDhtUngrd2tFR010Z1ZtR3NoWGRIYnJaaU9jaTVZcUhNWWNPUWZkcEFqeTlmTFpqUDJQamxFUmkzZHRLWklWQ1pRWlRlS0p1RGRpMFE'),
+(7, '	剑拔弩张的盟友（1941-1945）下册_齐锡生著_北京：社会科学文献出版社_2012版', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=MmM2YlBxRk9Ea3FnYVFJcHhyYkdXT3hPaFdxb1laaVE0SE1DWHBlNnlidlhmZUQxRkVmMm5ZNHNMTzhoc1BPZXBvaXNuYnpoVGg2QXllMUY3TS82enlpWnIzd2djT3ZtUXRqc1RMeGFEQjI4dzVsSVlsdFhlWkl5Ny96N0Q5VEFTTWdtbjk2TjNPODU3bzlnc1dmamZzWjZwRFRjMUNqUzFwUDZJU3ZLTlUrWW4yTUtsWDQvc3FWTk82bFNuU3pMZlBNOTd0cDZyc21rNnpkbWFpdmszM21lRE05NnltZ0F0TkRtcjdlblNQVXNFT3BWMm92UEhYV3dlQm56a3dtMWx6amZOZw', 'http://icaredbd.com:8076/downloadme.php?download_url=MmM2YlBxRk9Ea3FnYVFJcHhyYkdXT3hPaFdxb1laaVE0SE1DWHBlNnlidlhmZUQxRkVmMm5ZNHNMTzhoc1BPZXBvaXNuYnpoVGg2QXllMUY3TS82enlpWnIzd2djT3ZtUXRqc1RMeGFEQjI4dzVsSVlsdFhlWkl5Ny96N0Q5VEFTTWdtbjk2TjNPODU3bzlnc1dmamZzWjZwRFRjMUNqUzFwUDZJU3ZLTlUrWW4yTUtsWDQvc3FWTk82bFNuU3pMZlBNOTd0cDZyc21rNnpkbWFpdmszM21lRE05NnltZ0F0TkRtcjdlblNQVXNFT3BWMm92UEhYV3dlQm56a3dtMWx6amZOZw'),
+(8, '	罗马文化史：权力与荣耀  刘增泉 著', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=MmEzY1F1YlZEVW9aOU1FbURiWXNwZTNUUW9vcXh1Sk14VDJsRWxIcjNGNWI3MG9MRXVjZHVLMEE3TnVsbDVmOENWVVA3QTlXOEw0TVloc2swOFBNVVZGcllWREhJekNXNHM5V3lqaG11VmtRZC9sM0tyMUgvcm16Y09BdnFnVnYrNHdKV2dYOG5GYlVDdUZ3L1lpb3NTU1BEZGdLWDZrREQwcjVvZVUxQ3pTU0RkVWJUZnNRT0J4RyswTUVPZzQ', 'http://icaredbd.com:8076/downloadme.php?download_url=MmEzY1F1YlZEVW9aOU1FbURiWXNwZTNUUW9vcXh1Sk14VDJsRWxIcjNGNWI3MG9MRXVjZHVLMEE3TnVsbDVmOENWVVA3QTlXOEw0TVloc2swOFBNVVZGcllWREhJekNXNHM5V3lqaG11VmtRZC9sM0tyMUgvcm16Y09BdnFnVnYrNHdKV2dYOG5GYlVDdUZ3L1lpb3NTU1BEZGdLWDZrREQwcjVvZVUxQ3pTU0RkVWJUZnNRT0J4RyswTUVPZzQ'),
+(9, '	天下郡国利病书40', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=YzBiN2UrZ3doY3ppMllvd09NMWN2NE1jUWdwOVNsVlV3UVdicmZQYVdtMHZKMk5YQ1RNODZPL1VScStwMmtyVzN5ZTVmUUd4eEZOeno0UlA4dnVORlpkOTJKeDY4Um1sRzlSUVBVczRualBSRU9kWDZhdys5c1BmSmJ2MjlOVUptTGgweVpRUitTVGt5aU93MXIrOElQMXBraXNaL2c', 'http://icaredbd.com:8076/downloadme.php?download_url=YzBiN2UrZ3doY3ppMllvd09NMWN2NE1jUWdwOVNsVlV3UVdicmZQYVdtMHZKMk5YQ1RNODZPL1VScStwMmtyVzN5ZTVmUUd4eEZOeno0UlA4dnVORlpkOTJKeDY4Um1sRzlSUVBVczRualBSRU9kWDZhdys5c1BmSmJ2MjlOVUptTGgweVpRUitTVGt5aU93MXIrOElQMXBraXNaL2c'),
+(10, '	北大整理本_春秋左传正义（全四册）_晋杜预注； (1)', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=Y2FjNVhRMmRCdnlXWkd1bmxmOG9NOWNpRUpqeHR6QXU3L3dxY0lweXowajF4ZGZsZ2d5aFd3eWFaOTY3eDdwOVFFRVdQTC9mc3JRdDRvU2VtZHU0SUdYRzRRUVZKdVcyeFlpMS9CeGlrSWsrNnoyOWlybVpZMkZDWEJuTlpwQUVMOEJlUDFBNFVib3UvR29iV2F5cHBKUjM4dy9PTkQ1WVVUUHZJRy9TcGlyMXA1SFF0Q2hCVytoR1VhWldvYjgvTGl4elZnbS8wTFkyYXlVM1p6NjlqSSs2VDBwVg', 'http://icaredbd.com:8076/downloadme.php?download_url=Y2FjNVhRMmRCdnlXWkd1bmxmOG9NOWNpRUpqeHR6QXU3L3dxY0lweXowajF4ZGZsZ2d5aFd3eWFaOTY3eDdwOVFFRVdQTC9mc3JRdDRvU2VtZHU0SUdYRzRRUVZKdVcyeFlpMS9CeGlrSWsrNnoyOWlybVpZMkZDWEJuTlpwQUVMOEJlUDFBNFVib3UvR29iV2F5cHBKUjM4dy9PTkQ1WVVUUHZJRy9TcGlyMXA1SFF0Q2hCVytoR1VhWldvYjgvTGl4elZnbS8wTFkyYXlVM1p6NjlqSSs2VDBwVg'),
+(11, '	崇祯长编（外十种）简体横排点校本', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=ZjY1Ym5Ib3pVWGk5dkUrSUFzWFB1K3JESWJjU1BLUktpYzZaOXVnOS9qL2NIK0NHbkVMWFo3aEVGSDdLNGVWNkFXeGFqQWxsR3BJLzZCWnFDRHJURy94OGFzWm1GNUcwb0FqMzl4cEZVUEJyczhtdjZsaFNKcmFpemQzVDRXbXRLc1RSTzlNK0s0TWpKVTlPaHhwWWtGQktDMktRNTI1L2wzcU1ONHVheTk5bnBDY1RlY0xGU0RyNjczc0lhMkU', 'http://icaredbd.com:8076/downloadme.php?download_url=ZjY1Ym5Ib3pVWGk5dkUrSUFzWFB1K3JESWJjU1BLUktpYzZaOXVnOS9qL2NIK0NHbkVMWFo3aEVGSDdLNGVWNkFXeGFqQWxsR3BJLzZCWnFDRHJURy94OGFzWm1GNUcwb0FqMzl4cEZVUEJyczhtdjZsaFNKcmFpemQzVDRXbXRLc1RSTzlNK0s0TWpKVTlPaHhwWWtGQktDMktRNTI1L2wzcU1ONHVheTk5bnBDY1RlY0xGU0RyNjczc0lhMkU'),
+(12, '	世界军事历史全书  【美】杜派著  中国友谊出版公司1998版', 'pdf', 'http://icaredbd.com:8076/download.php?download_url=NTIzNEFKV3JGSmhEVTFoT0d6TU4wdkpQaEZxeW1URTJjM1oraWpFQmtsc0RXRFZvLzhjT040WTdEb0RIRE5DR3pNUXkyTEJoRnlBN1RyTWRtUmd5enRuNDF3anlIdjZ5Tld6RS9aUm1uaXAwbGlmWG02OUEwVkNDdENXYlpPTFdJWGVjL1hSNENncmh1Z0ROdVl0L2ZYNks1ZWhZVEhwSWpOemlYb3JPWFlleU9kczI2T2tIZEFCem9weS9maDhkRmNmSnlPTUtvajNPdlJQMVFnNjhCeXhNRUV5Q2Fxa2Z2bXoxckFR', 'http://icaredbd.com:8076/downloadme.php?download_url=NTIzNEFKV3JGSmhEVTFoT0d6TU4wdkpQaEZxeW1URTJjM1oraWpFQmtsc0RXRFZvLzhjT040WTdEb0RIRE5DR3pNUXkyTEJoRnlBN1RyTWRtUmd5enRuNDF3anlIdjZ5Tld6RS9aUm1uaXAwbGlmWG02OUEwVkNDdENXYlpPTFdJWGVjL1hSNENncmh1Z0ROdVl0L2ZYNks1ZWhZVEhwSWpOemlYb3JPWFlleU9kczI2T2tIZEFCem9weS9maDhkRmNmSnlPTUtvajNPdlJQMVFnNjhCeXhNRUV5Q2Fxa2Z2bXoxckFR');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_book`
+--
+ALTER TABLE `tbl_book`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_book`
+--
+ALTER TABLE `tbl_book`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
